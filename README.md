@@ -40,7 +40,7 @@ This project demonstrates a basic implementation of a CRUD Web API. It is design
 - **PUT** /Items/updateItem: Update an existing entry.
 - **DELETE** /delete/Items/deleteItem: Delete an entry.
 
-##database-configuration
+## Database Configuration
 
 Initiate a database on SQL Server with the name: "ItemDb".
 
