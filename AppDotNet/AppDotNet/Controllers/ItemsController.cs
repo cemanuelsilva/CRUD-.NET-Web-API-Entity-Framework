@@ -18,7 +18,7 @@ namespace AppDotNet.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        [HttpGet("allItems")]
         public async Task<ActionResult<List<Items>>> GetAllItems()
         {
             var items = await _context.Item.ToListAsync();
@@ -40,7 +40,7 @@ namespace AppDotNet.Controllers
             return Ok(item);
         }
 
-        [HttpPost]
+        [HttpPost("addItem")]
         public async Task<ActionResult<List<Items>>> AddItem(Items item)
         {
             _context.Item.Add(item);
@@ -49,7 +49,7 @@ namespace AppDotNet.Controllers
             return Ok(await _context.Item.ToListAsync());
         }
 
-        [HttpPut]
+        [HttpPut("updateItem")]
         public async Task<ActionResult<List<Items>>> UpdateItem(Items item)
         {
 
@@ -69,7 +69,7 @@ namespace AppDotNet.Controllers
             return Ok(await _context.Item.ToListAsync());
         }
 
-        [HttpDelete]
+        [HttpDelete("deleteItem")]
         public async Task<ActionResult<List<Items>>> DeleteItem(string name)
         {
 

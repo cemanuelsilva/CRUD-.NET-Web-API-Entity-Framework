@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|solutionrelative:appdotnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|c:\\users\\carlos\\desktop\\crud-.net-web-api-entity-framework\\appdotnet\\appdotnet\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|solutionrelative:appdotnet\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|c:\\users\\carlos\\desktop\\crud-.net-web-api-entity-framework\\appdotnet\\appdotnet\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|solutionrelative:appdotnet\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|c:\\users\\carlos\\desktop\\crud-.net-web-api-entity-framework\\appdotnet\\appdotnet\\migrations\\20240823163925_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|solutionrelative:appdotnet\\migrations\\20240823163925_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|c:\\users\\carlos\\desktop\\crud-.net-web-api-entity-framework\\appdotnet\\appdotnet\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|solutionrelative:appdotnet\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEB823E0-6D83-4D14-989E-37FE3E11E3CA}|AppDotNet\\AppDotNet.csproj|c:\\users\\carlos\\desktop\\crud-.net-web-api-entity-framework\\appdotnet\\appdotnet\\entities\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DataContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\Migrations\\DataContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "AppDotNet\\Migrations\\DataContextModelSnapshot.cs",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "20240823163925_Initial.cs",
               "DocumentMoniker": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\Migrations\\20240823163925_Initial.cs",
               "RelativeDocumentMoniker": "AppDotNet\\Migrations\\20240823163925_Initial.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\Program.cs",
               "RelativeDocumentMoniker": "AppDotNet\\Program.cs",
@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "AppDotNet\\appsettings.json",
               "ToolTip": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\appsettings.json",
               "RelativeToolTip": "AppDotNet\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-08-23T16:23:08.084Z",
               "EditorCaption": ""
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AppDotNet\\Properties\\launchSettings.json",
@@ -119,15 +119,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "AppDotNet\\Controllers\\ItemsController.cs",
               "ToolTip": "C:\\Users\\Carlos\\Desktop\\CRUD-.NET-Web-API-Entity-Framework\\AppDotNet\\AppDotNet\\Controllers\\ItemsController.cs",
               "RelativeToolTip": "AppDotNet\\Controllers\\ItemsController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAAAFIAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T15:55:07.261Z"
+              "WhenOpened": "2024-08-23T15:55:07.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
