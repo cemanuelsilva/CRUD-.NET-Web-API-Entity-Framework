@@ -44,3 +44,6 @@ This project demonstrates a basic implementation of a CRUD Web API. It is design
 
 Initiate a database on SQL Server with the name: "ItemDb".
 
+## Running the Application
+
+After all the configuration have been done, you can just run it! :D
