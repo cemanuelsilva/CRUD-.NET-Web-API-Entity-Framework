@@ -5,7 +5,7 @@ This repository represents the creation of my first CRUD (Create, Read, Update, 
 - **C#**
 - **SQL Server**
 - **.NET 8 && Entity Framework**
-- ** Swagger **
+- **Swagger**
 
 ## Table of Contents
 
@@ -39,3 +39,8 @@ This project demonstrates a basic implementation of a CRUD Web API. It is design
 - **POST** /Items/addItem: Create a new entry.
 - **PUT** /Items/updateItem: Update an existing entry.
 - **DELETE** /delete/Items/deleteItem: Delete an entry.
+
+##database-configuration
+
+Initiate a database on SQL Server with the name: "ItemDb".
+
