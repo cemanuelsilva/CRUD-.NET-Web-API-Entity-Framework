@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Items Management</h1>
+
+    <h2>Add New Item</h2>
+    <form id="addItemForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="price">Price:</label>
+        <input type="number" id="price" required>
+        <label for="count">Count:</label>
+        <input type="number" id="count" required>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <h2>Update Item</h2>
+    <form id="updateItemForm">
+        <label for="updateId">Item ID:</label>
+        <input type="number" id="updateId" required>
+        <label for="updateName">New Name:</label>
+        <input type="text" id="updateName" required>
+        <label for="updatePrice">New Price:</label>
+        <input type="number" id="updatePrice" required>
+        <label for="updateCount">New Count:</label>
+        <input type="number" id="updateCount" required>
+        <button type="submit">Update Item</button>
+    </form>
+
+    <h2>Delete Item</h2>
+    <form id="deleteItemForm">
+        <label for="deleteName">Item Name:</label>
+        <input type="text" id="deleteName" required>
+        <button type="submit">Delete Item</button>
+    </form>
+
+    <h2>All Items</h2>
+    <button id="getAllItems">Load Items</button>
+
+    <div id="items"></div>
+
+    <script>
+        const apiUrl = 'https://localhost:7225/api/Items';
+
+    // Function to load and display all items
+    document.getElementById('getAllItems').addEventListener('click', async () => {
+        const response = await fetch(`${apiUrl}/allItems`);
+        const items = await response.json();
+
+        let itemsHtml = '<table>';
+        itemsHtml += '<tr><th>ID</th><th>Name</th><th>Price</th><th>Count</th></tr>';
+
+        items.forEach(item => {
+            itemsHtml += `<tr>
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>${item.count}</td>
+            </tr>`;
+        });
+
+        itemsHtml += '</table>';
+        document.getElementById('items').innerHTML = itemsHtml;
+    });
+
+    // Function to add a new item
+    document.getElementById('addItemForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const newItem = {
+            name: document.getElementById('name').value,
+            price: parseFloat(document.getElementById('price').value),
+            count: parseInt(document.getElementById('count').value)
+        };
+
+        const response = await fetch(`${apiUrl}/addItem`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newItem)
+        });
+
+        const items = await response.json();
+        alert('Item added successfully!');
+        document.getElementById('getAllItems').click(); // Reload items
+    });
+
+    // Function to update an item
+    document.getElementById('updateItemForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const updatedItem = {
+            id: parseInt(document.getElementById('updateId').value),
+            name: document.getElementById('updateName').value,
+            price: parseFloat(document.getElementById('updatePrice').value),
+            count: parseInt(document.getElementById('updateCount').value)
+        };
+
+        const response = await fetch(`${apiUrl}/updateItem`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedItem)
+        });
+
+        const items = await response.json();
+        alert('Item updated successfully!');
+        document.getElementById('getAllItems').click(); // Reload items
+    });
+
+    // Function to delete an item by name
+    document.getElementById('deleteItemForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('deleteName').value;
+
+        const response = await fetch(`${apiUrl}/deleteItem?name=${encodeURIComponent(name)}`, {
+            method: 'DELETE'
+        });
+
+        const items = await response.json();
+        alert('Item deleted successfully!');
+        document.getElementById('getAllItems').click(); // Reload items
+    });
+    </script>
+
+</body>
+</html>
